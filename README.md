@@ -24,7 +24,7 @@ https://ko.reactjs.org/
 
 ### node 해결법
 * npm install -g create-react-app@latest
-
+---
 ## 2장
 ### README.md 작성요령
 * 이름:h1
