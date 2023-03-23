@@ -13,6 +13,9 @@
 * GitHub 저장소 확인
 
 * (Source Controll에서 퍼블릭 누르고 생성하기)
+
+### 변수 선언학
+< const element = <h1>hello, world</h1>;   >
 ---
 ## 3장
 
