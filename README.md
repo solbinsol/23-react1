@@ -12,7 +12,7 @@
 * 로컬에서 23-React1 푸쉬
 * GitHub 저장소 확인
 
-//Source Controll에서 퍼블릭 누르고 생성하기
+* (Source Controll에서 퍼블릭 누르고 생성하기)
 ---
 ## 3장
 
