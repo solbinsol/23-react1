@@ -3,6 +3,27 @@
 
 ---
 ## 3주차 3/16
+## 3장
+
+### 리엑트 시작하기
+https://ko.reactjs.org/
+문서 -> CDN 링크(헤더나 바디끝나는 위쪽에 복붙)
+웹사이트에 React 추가하기
+
+### React 추가 방법
+* 1단계: HTML 파일에 DOM 컨테이너 설치
+
+* 2단계: 스크립트 태그 추가하기
+
+* 3단계: React 컴포넌트 만들기
+
+### npx npm
+* 폴더생성 후 vs code 킴
+* 터미널에 npx create-react-app myApp
+* 생선된 myApp 폴더로 킨 후 터미널에 npx start
+
+### node 해결법
+* npm install -g create-react-app@latest
 
 ## 2장
 ### README.md 작성요령
@@ -48,27 +69,7 @@ DOM : 동기식 Virtual DOM : 비동기식
 * ### 높은 상태 관리 복잡도
 ---
 
-## 3장
 
-### 리엑트 시작하기
-https://ko.reactjs.org/
-문서 -> CDN 링크(헤더나 바디끝나는 위쪽에 복붙)
-웹사이트에 React 추가하기
-
-### React 추가 방법
-* 1단계: HTML 파일에 DOM 컨테이너 설치
-
-* 2단계: 스크립트 태그 추가하기
-
-* 3단계: React 컴포넌트 만들기
-
-### npx npm
-* 폴더생성 후 vs code 킴
-* 터미널에 npx create-react-app myApp
-* 생선된 myApp 폴더로 킨 후 터미널에 npx start
-
-### node 해결법
-* npm install -g create-react-app@latest
 
 ## 1~2 주차 3/9
 
