@@ -13,9 +13,11 @@
 * GitHub 저장소 확인
 
 * (Source Controll에서 퍼블릭 누르고 생성하기)
+### JSX란
+* JavaScript의 모든 기능이 포함되어 있음
+* 표현식임 (if 나 for 문 사용 가능)
 
-### 변수 선언하기
-"< const element = <h1>hello, world</h1>;   >"
+
 ---
 ## 3장
 
