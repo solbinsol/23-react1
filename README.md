@@ -1,70 +1,91 @@
-# Getting Started with Create React App
+# 23-React1 김솔빈
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+---
+## 3주차 3/16
 
-In the project directory, you can run:
+## 2장
+### README.md 작성요령
+* 이름:h1
+* 강의날자:h2
+* 학습내용(필수):h2이하
+* 작성코드(선택)
+* 최근 내용이 위로
+* 날자 별 구분
+---
+## 리엑트 장점
 
-### `npm start`
+### 빠른 업데이트와 렌더링속도
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+(동기식 비동기식 : 서버랑 같이 움직이는지 아닌지)<br>
+동기식 : 메뉴 클릭시 그쪽에 있는 파일을 그대로 다운로드<br>    
+비동기식 : 메뉴 클릭시 변화가 있는곳만 렌더링함  
+DOM : 동기식 Virtual DOM : 비동기식  
+### 컴포넌트 기반 구조 
+* 재사용성이 뛰어남
+* 모든 페이지는 컴포넌트로 구성
+* 하나의 컴포넌트는 다른 여러개의 컴포넌트의 조합으로 구성할 수 있음
+* 블록을 조립하는 것처럼 컴포넌트를 조합해 웹개발  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 재사용성
+* 반복적인 작업을 줄여 생산성 높임
+* 유지보수 용이
+* 재사용이 가능 하려면 해당 묘듈의 의존성이 없어야함
 
-### `npm test`
+### 든든한 지원군
+* 메타(구 페이스북)에서 오픈소스 프로젝트로 관리하고 있어 계속 발전하고 있음
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 활발한 지식 공유 & 커뮤니티
+<br>
 
-### `npm run build`
+### 모바일 앱 개발가능
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 리엑트 단점
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* ### 방대한 학습량
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* ### 높은 상태 관리 복잡도
+---
 
-### `npm run eject`
+## 3장
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 리엑트 시작하기
+https://ko.reactjs.org/
+문서 -> CDN 링크(헤더나 바디끝나는 위쪽에 복붙)
+웹사이트에 React 추가하기
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### React 추가 방법
+* 1단계: HTML 파일에 DOM 컨테이너 설치
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* 2단계: 스크립트 태그 추가하기
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* 3단계: React 컴포넌트 만들기
 
-## Learn More
+### npx npm
+* 폴더생성 후 vs code 킴
+* 터미널에 npx create-react-app myApp
+* 생선된 myApp 폴더로 킨 후 터미널에 npx start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### node 해결법
+* npm install -g create-react-app@latest
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 1~2 주차 3/9
 
-### Code Splitting
+### 자바스크립트의 자료형
+### 자바스크립트의 연산자
+* let a = 2, let b = 4
+* console.log(a+b) : 6
+* console.log(a / b) : 0.5
+* console.log(a % b) : 2
+* console.log(a ** b) : 16
+---
+* let a = 1; let b = a++
+* console.log(a,b) : 2, 1
+* let c = 1, let d = ++c
+* console.log(c, d) : 2, 2
+---
+* let a = 1, let b = '1'
+* console.log(a === b) : false
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
