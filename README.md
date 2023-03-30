@@ -28,7 +28,9 @@ Root DOM node
 <//div id="root"><//div> 필수코드
 
 #### 렌더링된 엘리먼트 업데이트하기
-tick 함수와 element 사용
+tick 함수와 element 사용  
+tick 함수는 현재 시간을 포함한 element를 생성해서 root div에 렌더링함  
+setlnterval()함수를 이용해 위에서 정의한 tick()를 1초에 한번씩 호출함 즉 1초에 한번씩 element를 새로 만들고 그것을 교체하는 것
 ---
 ## 3장 4주차 3/23
 
