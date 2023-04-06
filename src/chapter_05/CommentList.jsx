@@ -3,7 +3,7 @@ import Comment from "./Comment";
 
 const comments = [
     {
-        name: "이인제",
+        name: "붜꺽웅엔",
         comment: "안녕하세요, 소플입니다.",
     },
     {
@@ -22,6 +22,7 @@ function CommentList(props) {
             {comments.map((comment) => {
                 return (
                     <Comment name={comment.name} comment={comment.comment} />
+                    
                 );
             })}
         </div>
