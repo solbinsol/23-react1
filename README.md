@@ -9,7 +9,7 @@
 
 ### (실습) 댓글 컴포넌트 만들기
 ##### /src/chapter_05
-* CommentList.js 생성
+* Comment.js
 
 ---
 ## 4장 5주차 3/30
