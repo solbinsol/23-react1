@@ -38,6 +38,23 @@ function Counter(props){
 * 이 훅은 렌더링이 일어나느 동안 실행됨
 * 따라서 렌더링이 일어나는 동안 실행되어서는 안될 작업을 넣으면 안된다.
 * ex ) useEffect 사이드 이펙트 등
+
+
+### useCallback
+* useCallback() 훅은 useMemo()와 유사한 역알을 함
+* 차이점은 값이 아닌 함수를 반환한다는 점
+* 의존성 배열을 파라미터로 받는 것은 useMemo와 동일함
+* 파라미터로 받은 함수를 콜백이라고함
+* useMemo와 마찬가지로 의존성 배열 중 하나라도 변경되면 콜백함수 반환
+
+``` js
+  const memoizedCallback = useCallback(
+    () => {
+      doSomething(의존성 변수1, 의존성 변수2);
+    },
+    [의존성 변수1 , 의존성 변수2]
+  );
+```
 ---
 ## 5~6장 6주차 4/6
 ### State 란?
