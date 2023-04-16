@@ -19,8 +19,7 @@ import CountDown from './chapter_04e/CountDown';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Counter/>
-    <CountDown/>
+    <Accommodate/>
   </React.StrictMode>
 );
 
