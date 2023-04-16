@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Accommodate from './chapter_07/Accommodate';
 import Clock from './chapter_04/Clock';
+import Tick from './chapter_04//Tick';
 import reportWebVitals from './reportWebVitals';
 import Library from './chapter_03/Library';
 import Comment from './chapter_05/Comment';
@@ -15,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <Clibrary/>
+    <Tick/>
   </React.StrictMode>
 );
 

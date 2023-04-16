@@ -1,14 +1,17 @@
+
 import React from "react";
+import ReactDOM from "react-dom/client";
 
 
-
-function Clock() {
-  return(
-      <div>
-        <h1>안뇽 리액트</h1>
-        <h2>현재시간 : {new Date().toLocaleTimeString()}</h2>
-      </div>
-    )
-    
+function Clock(props) {
+  return (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>현재 시간은 {props.date.toLocaleTimeString()}.</h2>
+    </div>
+  );
 }
+
+
+
 export default Clock

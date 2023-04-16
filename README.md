@@ -110,7 +110,7 @@ function Counter(props){
 * 별도의 객체로 받아 컴포넌트에서는 이것을 분리하여 출력하도록 해야함
 * 이떄 사용하는 함수가 map()함수
 
-## 복습
+## 되세기기
 ### 컴포넌트 추출 2
 * 복잡한 컴포넌트를 쪼개 여러개의 컴포넌트로 나눌 수 있음
 * 큰 컴포넌트에서 일부를 추출해 새로운 컴포넌트를 만듬
@@ -383,6 +383,51 @@ export default Clibrary
 // Cook.jsx 를 임포트 하여 안에 값을 지정 index.js 에서는 Clibrary를 호출해야함
 
 ```
+
+##### 챕터5 시계 복습 (생명주기)
+##### 초당 업데이트 // 실시간 
+1초당 반복하는 생명주기에 핵심 함수
+```js
+ setInterval(Tick, 1000);
+```
+
+Clock.jsx 
+```js
+
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+function Clock(props) {
+  return (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {props.date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+
+export default Clock
+```
+clock.jsx 만으로도 실행이 되지만 실행이 되었을떄의 시간만 나온다.  
+자동으로 시간을 업데이트 하기 위한 jsx 파일을 추가  
+Tick.jsx
+```js
+import React from "react";
+import ReactDOM  from "react-dom";
+import Clock from "./Clock"
+function Tick() {
+    ReactDOM.render(
+      <Clock date={new Date()} />,
+      document.getElementById('root')
+    );
+  }
+  
+  setInterval(Tick, 1000);
+
+export  default Tick
+```
+참고한 홈페이지 https://narup.tistory.com/189
+//5의 배수를 제외한 카운터 등 생명주기 이벤트 등
 
 
 
