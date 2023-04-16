@@ -339,6 +339,12 @@ DOM : 동기식 Virtual DOM : 비동기식
 ---
 ## 복습
 ##### 챕터3 복습
+
+Cook.jsx 에서 어떤 글을 출력할지 정하고
+Clibray.jsx 에서 변수 ? 속성 ? 에 들어가는 값을 지정
+
+
+Cook.jsx
 ``` js
 
 import React from "react";
@@ -356,6 +362,7 @@ export default Cook
 
 
 ```
+Clibray.jsx
 ```js
 
 import Cook from "./Cook";
