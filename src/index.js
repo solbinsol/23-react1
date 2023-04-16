@@ -10,11 +10,12 @@ import Comment from './chapter_05/Comment';
 import CommentList from './chapter_05/CommentList'
 import NotificationList from './chapter_06/NotificationList';
 import Notification from './chapter_06/Notification';
+import Clibrary from './chapter_03ex/Clibrary';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <Accommodate />
+    <Clibrary/>
   </React.StrictMode>
 );
 

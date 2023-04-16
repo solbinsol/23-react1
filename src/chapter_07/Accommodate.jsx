@@ -3,6 +3,8 @@ import useCounter from "./useCounter";
 
 const MAX_CAPACITY = 10;
 
+
+
 function Accommodate(props) {
     const [isFull, setIsFull] = useState(false);
     const [count, increaseCount, decreaseCount] = useCounter(0);
@@ -17,6 +19,8 @@ function Accommodate(props) {
         setIsFull(count >= MAX_CAPACITY);
         console.log(`Current count value: ${count}`);
     }, [count]);
+
+    
 
     return (
         <div style={{ padding: 16 }}>

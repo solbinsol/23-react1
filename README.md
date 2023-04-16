@@ -336,3 +336,46 @@ DOM : 동기식 Virtual DOM : 비동기식
 * console.log(a === b) : false
 
 
+---
+## 복습
+##### 챕터3 복습
+``` js
+
+import React from "react";
+const Cook=(props) =>{
+
+    return(
+    <div>
+    <h1>{`이 과자의 이름은 ${props.name}입니다`}</h1>
+    <h1>{`이 과자의 가격은 ${props.money}입니다`}</h1>
+    </div>
+    )
+}
+export default Cook 
+//const Cook=(props) props (속성 ex( Cook.name 이런 느낌으로 props.name ~ 등 사용)
+
+
+```
+```js
+
+import Cook from "./Cook";
+
+const Clibrary = (props) => 
+{
+    return(
+        <div>
+            <Cook name="치토스" money="1400"></Cook>
+            <Cook name="콘칩" money="1200"></Cook>
+            <Cook name="포테토칩" money="1300"></Cook>
+        </div>
+    )
+}
+
+export default Clibrary
+
+// Cook.jsx 를 임포트 하여 안에 값을 지정 index.js 에서는 Clibrary를 호출해야함
+
+```
+
+
+
