@@ -4,19 +4,23 @@ import './index.css';
 import App from './App';
 import Accommodate from './chapter_07/Accommodate';
 import Clock from './chapter_04/Clock';
-import Tick from './chapter_04//Tick';
+// import Tick from './chapter_04//Tick';
 import reportWebVitals from './reportWebVitals';
 import Library from './chapter_03/Library';
 import Comment from './chapter_05/Comment';
 import CommentList from './chapter_05/CommentList'
 import NotificationList from './chapter_06/NotificationList';
 import Notification from './chapter_06/Notification';
+// import Timer from './chapter_04ex/Counterr';
 import Clibrary from './chapter_03ex/Clibrary';
+//import CountUp from './chapter_04ex/CountUp';
+import Counter from './chapter_04e/Counter';
+import CountDown from './chapter_04e/CountDown';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-
-    <Tick/>
+    <Counter/>
+    <CountDown/>
   </React.StrictMode>
 );
 

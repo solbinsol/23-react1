@@ -430,4 +430,53 @@ export  default Tick
 //5의 배수를 제외한 카운터 등 생명주기 이벤트 등
 
 
+setInterval 함수 
 
+카운터.jsx
+```js
+import React from "react";
+import { useState } from "react";
+import { useRef } from "react";
+import { useEffect } from "react";
+function Counter() {
+    let [count, setCount] = useState(0);
+    let countRef = useRef(0);
+    useEffect(()=>{
+        setInterval(() => {
+        setCount(countRef.current += 0.5);
+        }, 1000)
+    },[])
+    return (
+      <>
+        <h1>카운트 : {count}</h1>
+       
+      </>
+    );
+  }
+
+  export default Counter
+```
+카운트다운.jsx
+```js
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useRef } from "react";
+function CountDown() {
+    let [count, setCount] = useState(100);
+    let countRef = useRef(100);
+    useEffect(()=>{
+      setInterval(() => {
+        
+        setCount((countRef.current -= 0.5));
+      }, 1000);
+    },[])
+  return (
+    <>
+      <h1>카운트다운 : {count}</h1>
+     
+    </>
+  );
+  }
+
+  export default CountDown
+```
