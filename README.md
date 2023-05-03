@@ -1,5 +1,198 @@
 # 23-React1 김솔빈
 ---
+# 4/27 병결 
+## 9 주차 4/27 
+#### 8장 이벤트 처리하기
+* DOM에서 클릭 이벤트 처리
+* React에서 클릭 이벤트 처리
+##### 차이점
+* 1. 이벤트 이름이 카멜방식으로 바뀜 (onclidk -> onClick)
+2. 전달하려는 함수는 문자열에서 함수 그대로 전달 (activate() -> activate)
+
+* 이벤트 핸들러(Event Handler) : 이벤트가 발생했을 때 해당 이벤트를 처리하는 함수 이벤트가 발생하는 것을 계속 듣고 있다가는 의미로 이벤트 리스너(Event Listener) 라고도 부름
+
+* 이벤트 핸들러 추가하는 방법
+```
+1. 버튼을 클리갛면 이벤트 핸드럴 함수인 handleClick() 호출  
+2. bind를 사용하지 않으면 this.handleClock은 글로벌 스코프에서 호출되어, undefined로 사용할 수 없기 때문에
+3. bind를 사용하지 않으려먼 화살표 함수를 사용하는 방법도 있다. ( => )
+클래스 컴포넌트는 이제 거의 사용하지 않기 때문에 참고만.
+```
+ 이벤트 핸들러 추가 코드
+``` js
+  function Toggle(props){
+  const [isToggleOn, setIsToggleOn] = useState(true);
+
+  // 방법 1. 함수 안에 함수로 정의
+  function handleClick(){
+    setIsToggleOn((isToggleOn) => !isToggleOn);
+  }
+
+  // 방법 2. arrow function을 사용하여 정의
+  const handleClick = () => {
+    setIsToggleOn((isToggleOn) => !isToggleOn);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      {isToggleOn ? "켜짐" : "꺼짐"}
+    </button>
+  );
+}
+
+// 함수형에서 이벤트 핸들러를 정의하는 방법은 두 가지 이다.
+// 함수형에서는 this 를 사용하지 않고 onClick에서 바로 handleClick을 넘긴다
+```
+#### Arguments 전달하기
+* 함수를 정의할 때는 Parameter 혹은 매개변수,
+* 함수를 사용할 떄는 Argument 혹은 인자라고 부른다
+* 이벤트 핸들러에 매개변수를 전달해야 하는 경우도 많다.
+
+```js
+  <buttton onClick ={(event) => this.deleteItem(id,event)}>삭제 </button>
+  <button oncClick={this.deleteItem.bind(this, id)}>삭제하기</button>
+```
+* 동일한 역할을 하지만 하나는 화살표 함수, 다른 하나는 bind를 사용
+* event라는 매개변수는 리액트의 이벤트 객체를 의미
+* 두 방법 모두 첫 매개변수는 id, 두 번째 매개변수로는 event가 전달
+* 첫 번째 코드는 명시적으로 event를 매개변수로 넣어주고,
+두 번째 코드는 id이후 두번째 매개변수로 event가 자동 전달
+
+```js
+  // 함수형 컴포넌트에서 이벤트 핸들러에 매개변수를 전달할 때
+function MyButton(props){
+  const handleDelete = (id, event) => {
+    console.log(id, event.target);
+  };
+  return (
+    <button onClick={(event) => handleDelete(1,event)}>삭제하기</button>
+  );
+}
+
+```
+
+### 9장
+#### 조건부 렌더링
+* 조건 : 조건문의 조건
+```js
+function Greeting(props){
+  const isLoggedIn = props.isLoggedIn;
+  if(isLoggedIn){
+    return <UserGreeting />;
+  }
+  return <GuestGreeting />;
+}
+```
+* props로 전달 받은 isLoggedln이 true이면 을, false면 을 return
+이과 같은 렌더링을 조건부 렌더링이라 한다.
+
+#### 엘리먼트 변수
+* 엘리먼트 변수 : 렌더링해야 될 컴포넌트를 변수처럼 사용하는 방법
+
+```js
+  // state에 따라 button변수에 컴포넌트의 객체를 저장하여 return문에서 사용
+function LoginControl(porps){
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLoginClick=() => {
+    setIsLoggedIn(true);
+  }
+
+  const handleLogOutClick=() => {
+    setIsLoggedIn(false);
+  }
+
+  let button;
+  if(isLoggedIn) {
+    button = <LogoutButton onClick={handleLogoutClick} />;
+  } else {
+    button = <LoginButton onClick={handleLoginClick} />;
+  }
+
+  return (
+    <div>
+      <Greeting isLoggedIn = {isLoggedIn} />
+      {button}
+    </div>
+  );
+}
+```
+#### 인라인 조건
+* 필요한 곳에 조건문을 직접 넣어 사용하는 방법
+1 .인라인 if
+* if문을 사직접 사용하지 않고, 동일한 효과를 내기 위해 && 논리 연산자를 사용
+* &&는 and연산자로 모든 조건이 참일때만 참이 된다
+* 단축평가 : 첫 조건이 거짓이면 두번째 조건은 판단할 필요가 없다
+2.인라인 if-else
+* 삼항 연산자를 사용한다. [ 조건문 ? 참일 경우 : 거짓일 경우 ]
+* 문자열이나 엘리먼트를 넣어서 사용할 수 있다.
+
+```js
+  // 문자열
+function UserStatus(props){
+  return(
+    <div>
+      이 사용자는 현재 <b>{props.isLoggedIn ? '로그인' : '로그인하지 않은'}<b> 상태입니다.
+    </div>
+  )
+}
+
+----
+// 엘리먼트
+function LoginControl(props){
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLoginClick() => {
+    setIsLoggedIn(true);
+  }
+
+  const handleLogoutClick = () => {
+    setIsLoggedIn(false);
+  }
+  
+  return (
+    <div>
+      <Greeting isLoggedIn = {isLoggedIn} />
+      {isLoggedIn 
+      ? <LogoutButton onClick = {handleLogoutClick} /> 
+      : <LoginButton onClick = {handleLoginClick} />}
+    </div>
+  )
+}
+```
+
+
+
+#### 컴포넌트 렌더링 막기
+
+```js
+function MainPage(props) {
+  const [showWarning, setShowWarning] = useState(false);
+
+  const handledToggleClick = () => {
+    setShowWarning(prevShowWarning => !prevShowWarning); 
+  }
+
+  return (
+    <div>
+      <WarningBanner warning = {showWarning} />
+      <button onClick={handleToggleClick}>
+        {showWarning ? '감추기' : '보이기'}
+      </button>
+    </div>
+  )
+}
+
+```
+
+### 10장
+#### 리스트와 키
+* 리스트 : 목록
+배열 : 리스트를 사용하기 위한 자료구조
+배열 : js의 변수나 객체를 하나의 변수로 묶어놓은 것
+* 리스트 : 자료형 없음
+ex) 파이썬 : 배열 존재X, 리스트 O
+
 ## 7주차 4/13
 #### 훅이란 무엇인가?
 * 클래스형 컴포넌트에서는 생성자에서 state를 정의하고 setState()함수를 통해 state를 업데이트함
@@ -480,3 +673,6 @@ function CountDown() {
 
   export default CountDown
 ```
+
+## 소스코드 공유
+https://github.com/soaple/first-met-react-practice/tree/master/src
