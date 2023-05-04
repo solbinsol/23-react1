@@ -1,6 +1,45 @@
 # 23-React1 김솔빈
 ---
 ## 10 주차 5/4
+
+### 12장
+#### Shared State
+공유된 state를 의미
+
+```js
+  function BoilingVerdict(props){
+    if (props.celsius >=100){
+      return <p> 물 끓음 </p>
+    }
+    return <p> 안끓음 </p>
+  }
+```
+
+```js
+
+
+  function Calculator(props){
+    const [temperature , setTemperature] = useState('');
+
+    const handleChange = (event) =>{
+      setTemperature(event.target.value);
+    }
+
+    return(
+      <fieldset>
+        <legend> 섭씨 온도 입력
+        <input
+          value={temperature}
+          onChange={handleChange}>
+        <BoilingVerdList >
+
+      </fieldset>
+
+      // 미완성
+    )
+  }
+```
+
 ### 11장 
 #### 폼이란 무엇인가?
 * 폼은 일반적으로 사용자로부터 입력을 받기위한 양시에서 많이 사용
@@ -69,6 +108,29 @@
     }
 
 ```
+
+##### select 태그
+* 위 textarea 태그사용 에제와 동일한 함수 사용
+
+``` html
+  <select>
+    <option value = "apple">사과</option>
+    <option value = "banana">바나나</option>
+    <option value = "graple">포도</option>
+  </select>
+```
+##### File input 태그
+<input type="file"/> 
+
+* 값이 읽기 전용이기 때문에 비제어 컴포넌트가 된다.
+
+##### Input Null Value
+* 제어 컴포넌트에 value prop을 정해진 값으로 넣으면 코드를 수정하지 않는 한 입력값을 바꿀 수 없음
+* 만약 value prop은 넣되 자유롭게 입력할 수 있게 만들고 싶다면 값이 undefined 또는 null을 넣어주면 된다.
+
+
+
+
 
 #### 제어 컴포넌트
 * 사용자가 입력한 값에 접근하고 제어할 수 있도록 해주는 컴포넌트
