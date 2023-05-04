@@ -1,6 +1,81 @@
 # 23-React1 김솔빈
 ---
-### 10 주차 5/4
+## 10 주차 5/4
+### 11장 
+#### 폼이란 무엇인가?
+* 폼은 일반적으로 사용자로부터 입력을 받기위한 양시에서 많이 사용
+
+```html
+  <form>
+    <label>
+      이름 : 
+      <input type="text" name="name"/>
+    </label>
+    <button ~~></button>
+  </form>
+
+```
+사용자의 이름을 입력받는 html폼
+```js
+  function NameForm(props){
+    const [value,setValue] = useState('');
+
+    const handleChange = (event) =>{
+      setValue(event.target.value);
+    }
+
+    const handleSubmit = (event) =>{
+      alert('이름 :' + value);
+      event.preventDefault();
+    }
+
+    return(
+      <form onSubmit={handleSubin}>
+          <label>
+            이름 : 
+            <input type="text" value={value}
+            onChange={handleChange}/>
+          </label>
+          <button> ~~ </button>
+      </form>
+    )
+  }
+```
+##### textarea 태그
+```js
+    function RequestForm(props){
+    const [value,setValue] = useState('요청사항을 입력');
+
+    const handleChange = (event) =>{
+      setValue(event.target.value);
+    }
+
+    const handleSubmit = (event) =>{
+      alert('입력한 요청사항 :' + value);
+      event.preventDefault();
+    }
+
+    return(
+      <form onSubmit={handleSubin}>
+          <label>
+            요청사항 : 
+            <textarea value={value}
+            onChange={handleChange}/>
+          </label>
+          <button> ~~ </button>
+      </form>
+    )
+
+    }
+
+```
+
+#### 제어 컴포넌트
+* 사용자가 입력한 값에 접근하고 제어할 수 있도록 해주는 컴포넌트
+
+
+
+### 10장
 #### 리스트와 키란?
 * 리스트 : 자바스크릅티의 변수나 객체를 하나의 변수로 묶어 놓은 배열과 같은것
 * 키 : 각 객체나 아이템을 구분할 수 있는 고유한 값  

@@ -8,6 +8,7 @@ import Clock from './chapter_04/Clock';
 import reportWebVitals from './reportWebVitals';
 import Library from './chapter_03/Library';
 import Comment from './chapter_05/Comment';
+import AttendanceBook from './chapter_10/AttendanceBook';
 import CommentList from './chapter_05/CommentList'
 import NotificationList from './chapter_06/NotificationList';
 import Notification from './chapter_06/Notification';
@@ -19,7 +20,8 @@ import CountDown from './chapter_04e/CountDown';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Accommodate/>
+
+    <AttendanceBook/>
   </React.StrictMode>
 );
 
