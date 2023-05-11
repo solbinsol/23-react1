@@ -7,6 +7,7 @@ import Clock from './chapter_04/Clock';
 // import Tick from './chapter_04//Tick';
 import reportWebVitals from './reportWebVitals';
 import SignUp from './chapter_11/SignUp';
+import Calculator from './chapter_12/Calculator';
 import Library from './chapter_03/Library';
 import Comment from './chapter_05/Comment';
 import AttendanceBook from './chapter_10/AttendanceBook';
@@ -22,7 +23,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <SignUp/>
+    <Calculator/>
   </React.StrictMode>
 );
 
