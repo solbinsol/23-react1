@@ -19,11 +19,12 @@ import Clibrary from './chapter_03ex/Clibrary';
 //import CountUp from './chapter_04ex/CountUp';
 import Counter from './chapter_04e/Counter';
 import CountDown from './chapter_04e/CountDown';
+import Card from './chapter_13/Card';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 
-    <Calculator/>
+    <Card/>
   </React.StrictMode>
 );
 
