@@ -6,19 +6,19 @@
 * '여러개의 컴포넌트를 합쳐서 새로운 컴포넌트를 만드는것'
 * 조합방법에 따라 합성의 사용 기법은 다음과 같이 나눌 수 있음
 
-##### 1.Containment 
+#### 1.Containment 
 * 특정 컴포넌트가 하위 컴포넌트를 포합하는 형태의 합성 방법
 * 컴포넌트에 따라서는 어떤 자식 엘리먼트가 들어올지 미리 예상할 수 없는 경우가 있음
 * 범용적인 '박스' 역할을 하는 Sidebar 혹은 Dialog와 같은 컴퍼넌트에서 특히 자주 볼 수 있음
 * 이런 컴포넌트에서는 children prop을 사용해 자식 엘리먼트를 출력해 그대로 전달하는 것이 좋음
 * 이떄 children prop은 컴포넌트의 props에 기본적으로 들어있는 children 속성을 사용함
 
-##### 2.Specialization (특수화 , 전문화)
+#### 2.Specialization (특수화 , 전문화)
 *  특수화 : 범용적인 개념을 구별이 되게 구체화하는 것
 * 리액트에서는 합성을 사용하여 특수화를 구현
 
 
-##### 3.Containment와 Specialization 같이 사용하기
+#### 3.Containment와 Specialization 같이 사용하기
 * Containment를 위해서 
 
 * 리액트에서는 props , children을 통해 하위 컴포넌트를 하나로 모아서 제공
