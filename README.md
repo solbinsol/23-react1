@@ -13,16 +13,26 @@
 * 이런 컴포넌트에서는 children prop을 사용해 자식 엘리먼트를 출력해 그대로 전달하는 것이 좋음
 * 이떄 children prop은 컴포넌트의 props에 기본적으로 들어있는 children 속성을 사용함
 
+
+* 리액트에서는 props , children을 통해 하위 컴포넌트를 하나로 모아서 제공
+* 만일 여러 개의 children 집합이 필요할 경우는 별도로 props를 정의해서 각각 원하는 컴포넌트에 넣어줌
 #### 2.Specialization (특수화 , 전문화)
 *  특수화 : 범용적인 개념을 구별이 되게 구체화하는 것
 * 리액트에서는 합성을 사용하여 특수화를 구현
 
 
 #### 3.Containment와 Specialization 같이 사용하기
-* Containment를 위해서 
+* Containment를 위해서 props.children을 사용하고 , Specialization을 위해 직접 정의한 props를 사용하면 됨
 
-* 리액트에서는 props , children을 통해 하위 컴포넌트를 하나로 모아서 제공
-* 만일 여러 개의 children 집합이 필요할 경우는 별도로 props를 정의해서 각각 원하는 컴포넌트에 넣어줌
+--- 
+
+#### 상속
+* 합성과 대비되는 개념
+* 자식 클래스는 부모 클래스가 가진 변수나 함수 등의 속성을 모두 갖게 되는 개념
+* 리액트에서는 상속보다는 합성을 통해 새로운 컴포넌트를 생성
+
+
+
 ## 11 주차 5/11
 ### 중간고사 코드 리뷰 
 ### Calculator 실습
